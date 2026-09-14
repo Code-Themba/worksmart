@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import Sidebar from "./components/Sidebar";
 import { cn } from "@/lib/utils";
+import Navbar from "./components/Navbar";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -36,7 +37,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="min-h-full flex">
         <Sidebar />
-        <main className="bg-amber-200 w-full">{children}</main>
+        <main className="w-full flex flex-col">
+          <Navbar />
+          {children}
+        </main>
       </body>
     </html>
   );
