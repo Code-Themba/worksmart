@@ -1,4 +1,6 @@
+"use client";
 import { Button } from "@/components/ui/button";
+import { useState } from "react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -9,7 +11,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import Link from "next/link";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, ChevronUp } from "lucide-react";
 import {
   FaArrowRight,
   FaChevronDown,
@@ -21,10 +23,11 @@ import { GoGear } from "react-icons/go";
 import { MdOutlineDashboard } from "react-icons/md";
 
 export default function Sidebar() {
+  const [isOpen, setIsOpen] = useState(false);
   return (
-    <nav className="w-64 h-screen flex flex-col gap-5 bg-gray-100 p-5 border-r border-gray-400/20 shadow-md">
+    <nav className="w-64 h-screen flex flex-col gap-5 bg-gray-100 py-5 px-3 border-r border-gray-400/20 shadow-md">
       {/* Workspace Dropdown */}
-      <div className="flex items-center gap-2 border-b border-gray-400/20">
+      <div className="w-full flex items-center gap-2 border-b border-gray-400/20">
         <DropdownMenu>
           <DropdownMenuTrigger
             render={
@@ -53,7 +56,7 @@ export default function Sidebar() {
         </DropdownMenu>
       </div>
       {/* Tabs */}
-      <div className="flex flex-col gap-4 font-semibold text-gray-700 ">
+      <div className="w-full flex flex-col gap-4 font-semibold text-gray-700 ">
         <Link href="#" className="hover:bg-gray-200 p-2 rounded">
           <MdOutlineDashboard className="mr-2 inline" />
           Dashboard
@@ -73,7 +76,10 @@ export default function Sidebar() {
       </div>
 
       {/* Users Tasks */}
-      <div className="flex items-center justify-between py-4">
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className={`flex items-center justify-between py-4 px-1 text-gray-700 font-semibold hover:bg-gray-200 rounded-md ${isOpen && "bg-gray-400/20"}`}
+      >
         <h4 className="flex items-center gap-3">
           <LuSquareCheckBig />
           My Tasks{" "}
@@ -81,17 +87,26 @@ export default function Sidebar() {
             0
           </span>
         </h4>
-        <ChevronDown className="text-gray-500 inline-block" />
-      </div>
+        {/* {isOpen ? (
+            <ChevronUp
+              className={`text-gray-500 inline-block transition-transform duration-300 ${isOpen ? "rotate-180" : "rotate-0"}`}
+            />
+          ) : (
+            <ChevronDown className="text-gray-500 inline-block" />
+          )} */}
+        {isOpen ? (
+          <ChevronUp className="text-gray-500 inline-block opacity-100 scale-100" />
+        ) : (
+          <ChevronDown className="text-gray-500 inline-block opacity-100 scale-100" />
+        )}
+      </button>
       {/* Users Projects */}
-      <Link href="#">
-        <h4 className="flex items-center justify-between">
-          My Projects{" "}
-          <span className="inline-block">
-            <FaArrowRight />
-          </span>
-        </h4>
-      </Link>
+      <button className="flex items-center justify-between py-4 px-2 hover:bg-gray-200 rounded-md font-semibold text-gray-700">
+        <h4 className="flex items-center justify-between">My Projects </h4>
+        <span className="inline-block">
+          <FaArrowRight className="text-gray-500" />
+        </span>
+      </button>
     </nav>
   );
 }
