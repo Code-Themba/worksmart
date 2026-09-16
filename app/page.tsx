@@ -5,6 +5,7 @@ import ProjectOverview from "./components/dashboard/ProjectOverview";
 import MyTasksCard from "./components/dashboard/MyTasksCard";
 import OverdueCard from "./components/dashboard/OverdueCard";
 import InProgressCard from "./components/dashboard/InProgressCard";
+import RecentActivity from "./components/dashboard/RecentActivity";
 
 export default function Dashboard() {
   return (
@@ -64,8 +65,13 @@ export default function Dashboard() {
       </div>
       <div className="flex justify-between gap-4">
         {/* Project Overview */}
-        <div className="mt-6 flex-2">
-          <ProjectOverview />
+        <div className="mt-6 flex flex-col gap-6 flex-2">
+          <div>
+            <ProjectOverview />
+          </div>
+          <div>
+            <RecentActivity />
+          </div>
         </div>
         {/* My Task */}
         <div className=" mt-6 flex flex-col gap-6 flex-1">
