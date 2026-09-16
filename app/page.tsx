@@ -3,6 +3,7 @@ import { FiCheckCircle } from "react-icons/fi";
 import { IoWarningOutline } from "react-icons/io5";
 import ProjectOverview from "./components/ProjectOverview";
 import MyTasksCard from "./components/MyTasksCard";
+import OverdueCard from "./components/OverdueCard";
 
 export default function Dashboard() {
   return (
@@ -66,9 +67,12 @@ export default function Dashboard() {
           <ProjectOverview />
         </div>
         {/* My Task */}
-        <div className="mt-6 flex-1">
+        <div className=" mt-6 flex flex-col gap-6 flex-1">
           <div className="">
             <MyTasksCard />
+          </div>
+          <div>
+            <OverdueCard />
           </div>
         </div>
       </div>
