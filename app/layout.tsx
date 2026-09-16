@@ -37,7 +37,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       )}
       suppressHydrationWarning
     >
-      <body className="min-h-full flex">
+      <body className="absolute overflow-auto min-h-full flex">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

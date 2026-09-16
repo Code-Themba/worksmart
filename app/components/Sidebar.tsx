@@ -25,7 +25,7 @@ import { MdOutlineDashboard } from "react-icons/md";
 export default function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <nav className="w-64 h-screen flex flex-col gap-5 bg-gray-100 py-6 px-3 border-r border-gray-400/20 shadow-md dark:bg-gray-900 dark:text-white border-r border-gray-200 dark:border-gray-800">
+    <nav className="relative fixed w-64 flex flex-col gap-5 bg-gray-100 py-6 px-3 border-r border-gray-400/20 shadow-md dark:bg-gray-900 dark:text-white border-r border-gray-200 dark:border-gray-800">
       {/* Workspace Dropdown */}
       <div className="w-full flex items-center gap-2 border-b border-gray-400/20">
         <DropdownMenu>

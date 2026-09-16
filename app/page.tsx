@@ -2,6 +2,7 @@ import { FaRegFolderOpen, FaTasks } from "react-icons/fa";
 import { FiCheckCircle } from "react-icons/fi";
 import { IoWarningOutline } from "react-icons/io5";
 import ProjectOverview from "./components/ProjectOverview";
+import MyTasksCard from "./components/MyTasksCard";
 
 export default function Dashboard() {
   return (
@@ -59,13 +60,17 @@ export default function Dashboard() {
           </span>
         </div>
       </div>
-      <div className="flex">
+      <div className="flex justify-between gap-4">
         {/* Project Overview */}
         <div className="mt-6 flex-2">
           <ProjectOverview />
         </div>
         {/* My Task */}
-        <div className="flex-1"></div>
+        <div className="mt-6 flex-1">
+          <div className="">
+            <MyTasksCard />
+          </div>
+        </div>
       </div>
     </div>
   );

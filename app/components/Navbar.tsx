@@ -3,7 +3,7 @@ import ThemeToggler from "./ThemeToggler";
 export default function Navbar() {
   return (
     <div>
-      <nav className="w-full h-16 flex items-center justify-between bg-gray-100/2 p-4 border-b border-gray-400/2 shadow-sm">
+      <nav className=" w-full h-16 flex items-center justify-between bg-gray-100/2 p-4 border-b border-gray-400/2 shadow-sm">
         <input
           type="search"
           placeholder="Search projects, tasks, or team members..."
