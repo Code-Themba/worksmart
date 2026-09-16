@@ -1,4 +1,4 @@
-import ThemeToggler from "./ThemeToggler";
+import ThemeToggler from "./theme/ThemeToggler";
 
 export default function Navbar() {
   return (

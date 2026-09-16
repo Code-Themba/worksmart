@@ -7,8 +7,8 @@ export default function MyTasksCard() {
       <Card className="text-gray-800 dark:text-white shadow-md shadow-gray-400/20 dark:shadow-gray-400/10">
         <CardHeader>
           <CardTitle className="flex items-center justify-between border-b p-3 gap-1 font-bold">
-            <p className="flex items-center gap-1">
-              <span className="bg-gray-500/50 w-8 h-8 rounded-full px-2 text-slate-800 py-px font-bold">
+            <p className="flex items-center gap-3">
+              <span className="bg-gray-500/50 dark:text-white w-8 h-8 rounded-full px-2 text-slate-800 py-px font-bold">
                 <FaRegUser className="inline-block" />
               </span>
               My Tasks
@@ -19,7 +19,7 @@ export default function MyTasksCard() {
           </CardTitle>
         </CardHeader>
         <CardContent className="text-slate-800 dark:text-white">
-          <div className="w-full flex flex-col gap-1 border border-slate-500/40 p-3 my-4 shadow-md shadow-gray-400/20 dark:shadow-gray-400/10 rounded-md hover:cursor-pointer">
+          <div className=" flex flex-col gap-1 border border-slate-500/40 p-3 my-4 shadow-md shadow-gray-400/20 dark:shadow-gray-400/10 rounded-md hover:cursor-pointer">
             <p className="text-lg font-semibold ">Set Up EKS Cluster</p>
             <p className="text-slate-600/60 dark:text-gray-400  font-semibold">
               TASK * <span className="font-bold">HIGH Priority</span>{" "}

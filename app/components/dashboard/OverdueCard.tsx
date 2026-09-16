@@ -12,7 +12,7 @@ export default function OverdueCard() {
             </span>
             Overdue
           </p>
-          <span className="bg-green-500/60 w-6 h-6 rounded-full px-1.5 py-px font-bold">
+          <span className="bg-orange-500/50 w-6 h-6 rounded-full px-1.5 py-px font-bold">
             0
           </span>
         </CardTitle>

@@ -1,9 +1,10 @@
 import { FaRegFolderOpen, FaTasks } from "react-icons/fa";
 import { FiCheckCircle } from "react-icons/fi";
 import { IoWarningOutline } from "react-icons/io5";
-import ProjectOverview from "./components/ProjectOverview";
-import MyTasksCard from "./components/MyTasksCard";
-import OverdueCard from "./components/OverdueCard";
+import ProjectOverview from "./components/dashboard/ProjectOverview";
+import MyTasksCard from "./components/dashboard/MyTasksCard";
+import OverdueCard from "./components/dashboard/OverdueCard";
+import InProgressCard from "./components/dashboard/InProgressCard";
 
 export default function Dashboard() {
   return (
@@ -73,6 +74,9 @@ export default function Dashboard() {
           </div>
           <div>
             <OverdueCard />
+          </div>
+          <div>
+            <InProgressCard />
           </div>
         </div>
       </div>
